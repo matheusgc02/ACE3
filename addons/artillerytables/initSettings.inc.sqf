@@ -17,3 +17,11 @@ private _categoryName = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"
     false, // default value
     true // isGlobal
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(whitelistArtilleryComputer), "EDITBOX",
+    ["Artillery Computer Vehicle Whitelist", "list of classnames of vehicles where artillery computer will be allowed"],
+    _categoryName,
+    "", // default value
+    true // isGlobal
+] call CBA_fnc_addSetting;
