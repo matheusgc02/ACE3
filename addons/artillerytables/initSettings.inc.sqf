@@ -20,7 +20,7 @@ private _categoryName = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"
 
 [
     QGVAR(whitelistArtilleryComputer), "EDITBOX",
-    ["Artillery Computer Class Whitelist", "list of classnames of vehicles where artillery computer will be allowed"],
+    [LSTRING(artilleryComputerWhitelist_displayName), LSTRING(artilleryComputerWhitelist_description)],
     _categoryName,
     "", // default value
     true // isGlobal
