@@ -67,6 +67,12 @@
             <Chinesesimp>停用弹道计算机</Chinesesimp>
             <Turkish>Topçu Bilgisayarı Devre Dışı</Turkish>
         </Key>
+        <Key ID="STR_ACE_ArtilleryTables_artilleryComputerWhitelist_displayName">
+            <English>Artillery Computer Class Whitelist</English>
+        </Key>
+        <Key ID="STR_ACE_ArtilleryTables_artilleryComputerWhitelist_description">
+            <English>List of vehicle classnames where artillery computer restriction will be ignored</English>
+        </Key>
         <Key ID="STR_ACE_ArtilleryTables_rangetable_description">
             <English>Universal Artillery Rangetable</English>
             <Czech>Univerzální dělostřelecká tabulka střelby</Czech>
