@@ -18,9 +18,17 @@
 (_this select 0) params ["_vehicle", "_turret", "_fireModes", "_useAltElevation", "_turretAnimBody", "_invalidGunnerMem", "_elevationMode"];
 
 if (shownArtilleryComputer && {GVAR(disableArtilleryComputer)}) then {
-    // Still Don't like this solution, but it works
-    closeDialog 0;
-    [localize LSTRING(disableArtilleryComputer_displayName)] call EFUNC(common,displayTextStructured);
+    _whitelistArtilleryComputerArr = [];
+    if (typeName GVAR(whitelistArtilleryComputer) == "STRING") then {
+          _whitelistArtilleryComputerArr = GVAR(whitelistArtilleryComputer) splitString ",";
+    };
+    // If player's veghicle is in whitelist. Do not close Dialog.
+    if ({typeOf vehicle _vehicle == _x} count _whitelistArtilleryComputerArr < 1) then
+    {
+        // Still Don't like this solution, but it works
+        closeDialog 0;
+        [localize LSTRING(disableArtilleryComputer_displayName)] call EFUNC(common,displayTextStructured);
+    };
 };
 
 // Restart display if null (not just at start, this will happen periodicly)
