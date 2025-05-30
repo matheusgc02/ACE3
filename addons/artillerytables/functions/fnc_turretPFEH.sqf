@@ -19,10 +19,11 @@
 
 if (shownArtilleryComputer && {GVAR(disableArtilleryComputer)}) then {
     _whitelistArtilleryComputerArr = [];
+    // Break down string from CBA setting EDITBOX into an array.
     if (typeName GVAR(whitelistArtilleryComputer) == "STRING") then {
           _whitelistArtilleryComputerArr = GVAR(whitelistArtilleryComputer) splitString ",";
     };
-    // If player's veghicle is in whitelist. Do not close Dialog.
+    // If classname of player's veghicle is in whitelist. Do not close Dialog.
     if ({typeOf vehicle _vehicle == _x} count _whitelistArtilleryComputerArr < 1) then
     {
         // Still Don't like this solution, but it works
